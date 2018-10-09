@@ -1,0 +1,2 @@
+Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 502: r == 0
+Abort

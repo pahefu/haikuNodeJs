@@ -1,0 +1,12 @@
+prefix=/boot/system
+exec_prefix=${prefix}
+libdir=/boot/system/lib
+includedir=/boot/system/include
+
+Name: libuv
+Version: 1.23.1
+Description: multi-platform support library with a focus on asynchronous I/O.
+URL: http://libuv.org/
+
+Libs: -L${libdir} -luv  -lpthread -lbsd -lnetwork -lbe
+Cflags: -I${includedir}

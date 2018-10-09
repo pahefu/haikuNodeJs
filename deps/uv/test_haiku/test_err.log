@@ -1,0 +1,4676 @@
+1..335
+not ok 1 - platform_output
+# exit code 5376
+# Output from process `platform_output`:
+# uv_get_process_title: 
+# uv_cwd: /boot/home/Desktop/p/node-master/deps/uv/test_haiku
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-platform-output.c on line 55: err == 0
+# Abort
+ok 2 - active
+ok 3 - async
+ok 4 - async_null_cb
+ok 5 - async_ref
+ok 6 - barrier_1
+ok 7 - barrier_2
+ok 8 - barrier_3
+ok 9 - callback_stack
+ok 10 - check_ref
+ok 11 - close_fd
+ok 12 - close_order
+not ok 13 - closed_fd_events
+# exit code 5376
+# Output from process `closed_fd_events`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1581: 0 == uv_spawn(uv_default_loop(), &process, &options)
+# Abort
+ok 14 - condvar_1
+ok 15 - condvar_2
+ok 16 - condvar_3
+ok 17 - condvar_4
+ok 18 - condvar_5
+ok 19 - connect_unspecified
+ok 20 - connection_fail
+ok 21 - connection_fail_doesnt_auto_close
+ok 22 - cwd_and_chdir
+ok 23 - default_loop_close
+ok 24 - delayed_accept
+not ok 25 - dlerror
+# exit code 5376
+# Output from process `dlerror`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-dlerror.c on line 45: strstr(msg, path) != NULL
+# Abort
+ok 26 - eintr_handling
+ok 27 - embed
+ok 28 - emfile # SKIP setrlimit(RLIMIT_NOFILE) failed, running under valgrind?
+ok 29 - env_vars
+ok 30 - error_message
+not ok 31 - fork_fs_events_child
+# timeout
+# Output from process `fork_fs_events_child`: (no output)
+ok 32 - fork_fs_events_child_dir
+not ok 33 - fork_fs_events_file_parent_child
+# exit code 5376
+# Output from process `fork_fs_events_file_parent_child`:
+# Running child
+# uv_run_tests_a: /boot/home/Desktop/p/node-master/deps/uv/src/unix/core.c:542:uv__close: fd > STDERR_FILENO
+# Waited pid is 30120 with status 5376
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fork.c on line 86: WIFEXITED(child_stat)
+# Abort
+ok 34 - fork_signal_to_child
+ok 35 - fork_signal_to_child_closed
+ok 36 - fork_socketpair
+not ok 37 - fork_socketpair_started
+# exit code 5376
+# Output from process `fork_socketpair_started`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fork.c on line 50: 0 == status
+# Abort
+ok 38 - fork_threadpool_queue_work_simple
+ok 39 - fork_timer
+ok 40 - fs_access
+ok 41 - fs_async_dir
+ok 42 - fs_async_sendfile
+ok 43 - fs_chmod
+not ok 44 - fs_chown
+# exit code 5376
+# Output from process `fs_chown`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fs.c on line 1597: r == 0
+# Abort
+ok 45 - fs_copyfile
+not ok 46 - fs_event_close_in_callback
+# timeout
+# Output from process `fs_event_close_in_callback`: (no output)
+not ok 47 - fs_event_close_with_pending_event
+# timeout
+# Output from process `fs_event_close_with_pending_event`: (no output)
+ok 48 - fs_event_error_reporting
+not ok 49 - fs_event_getpath
+# timeout
+# Output from process `fs_event_getpath`: (no output)
+not ok 50 - fs_event_immediate_close
+# timeout
+# Output from process `fs_event_immediate_close`: (no output)
+not ok 51 - fs_event_no_callback_after_close
+# timeout
+# Output from process `fs_event_no_callback_after_close`: (no output)
+not ok 52 - fs_event_no_callback_on_close
+# timeout
+# Output from process `fs_event_no_callback_on_close`: (no output)
+not ok 53 - fs_event_ref
+# timeout
+# Output from process `fs_event_ref`: (no output)
+not ok 54 - fs_event_start_and_close
+# timeout
+# Output from process `fs_event_start_and_close`: (no output)
+not ok 55 - fs_event_watch_dir
+# timeout
+# Output from process `fs_event_watch_dir`: (no output)
+ok 56 - fs_event_watch_dir_recursive # SKIP Recursive directory watching not supported on this platform.
+not ok 57 - fs_event_watch_file
+# timeout
+# Output from process `fs_event_watch_file`: (no output)
+not ok 58 - fs_event_watch_file_current_dir
+# timeout
+# Output from process `fs_event_watch_file_current_dir`: (no output)
+not ok 59 - fs_event_watch_file_exact_path
+# timeout
+# Output from process `fs_event_watch_file_exact_path`: (no output)
+not ok 60 - fs_event_watch_file_twice
+# timeout
+# Output from process `fs_event_watch_file_twice`: (no output)
+not ok 61 - fs_event_watch_invalid_path
+# exit code 5376
+# Output from process `fs_event_watch_invalid_path`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fs-event.c on line 1083: r != 0
+# Abort
+ok 62 - fs_file_async
+ok 63 - fs_file_loop
+not ok 64 - fs_file_nametoolong
+# exit code 5376
+# Output from process `fs_file_nametoolong`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fs.c on line 644: r == UV_ENAMETOOLONG
+# Abort
+ok 65 - fs_file_noent
+ok 66 - fs_file_open_append
+ok 67 - fs_file_pos_after_op_with_offset
+ok 68 - fs_file_sync
+ok 69 - fs_file_write_null_buffer
+not ok 70 - fs_fstat
+# exit code 5376
+# Output from process `fs_fstat`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fs.c on line 1217: s->st_atim.tv_nsec == 0
+# Abort
+not ok 71 - fs_futime
+# exit code 5376
+# Output from process `fs_futime`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fs.c on line 2350: r == 0
+# Abort
+ok 72 - fs_mkdtemp
+ok 73 - fs_null_req
+ok 74 - fs_open_dir
+ok 75 - fs_poll
+ok 76 - fs_poll_getpath
+ok 77 - fs_poll_ref
+ok 78 - fs_read_file_eof
+ok 79 - fs_read_write_null_arguments
+ok 80 - fs_readlink
+ok 81 - fs_realpath
+ok 82 - fs_rename_to_existing_file
+ok 83 - fs_scandir_empty_dir
+ok 84 - fs_scandir_file
+ok 85 - fs_scandir_non_existent_dir
+ok 86 - fs_stat_missing_path
+ok 87 - fs_symlink
+ok 88 - fs_symlink_dir
+ok 89 - fs_unlink_readonly
+not ok 90 - fs_utime
+# exit code 5376
+# Output from process `fs_utime`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-fs.c on line 2245: r == 0
+# Abort
+ok 91 - fs_write_alotof_bufs
+ok 92 - fs_write_alotof_bufs_with_offset
+ok 93 - fs_write_multiple_bufs
+not ok 94 - get_currentexe
+# exit code 5376
+# Output from process `get_currentexe`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-get-currentexe.c on line 53: match && !strcmp(match, path)
+# Abort
+ok 95 - get_loadavg
+not ok 96 - get_memory
+# exit code 5376
+# Output from process `get_memory`:
+# free_mem=2408000258048, total_mem=1048174592
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-get-memory.c on line 35: total_mem > free_mem
+# Abort
+ok 97 - get_osfhandle_valid_handle
+ok 98 - get_passwd
+ok 99 - getaddrinfo_basic
+ok 100 - getaddrinfo_basic_sync
+ok 101 - getaddrinfo_concurrent
+ok 102 - getaddrinfo_fail
+ok 103 - getaddrinfo_fail_sync
+ok 104 - gethostname
+ok 105 - getnameinfo_basic_ip4
+ok 106 - getnameinfo_basic_ip4_sync
+ok 107 - getnameinfo_basic_ip6
+not ok 108 - getsockname_tcp
+# exit code 5376
+# Output from process `getsockname_tcp`:
+# server socket: 0.0.0.0:9123
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-getsockname.c on line 204: r == UV_ENOTCONN
+# Abort
+ok 109 - getsockname_udp
+ok 110 - getters_setters
+ok 111 - handle_fileno
+ok 112 - handle_type_name
+ok 113 - has_ref
+ok 114 - homedir
+ok 115 - hrtime
+ok 116 - idle_ref
+ok 117 - idle_starvation
+ok 118 - ip4_addr
+ok 119 - ip6_addr_link_local
+ok 120 - ip6_pton
+not ok 121 - ipc_closed_handle
+# exit code 5376
+# Output from process `ipc_closed_handle`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc.c on line 314: r == 0
+# Abort
+not ok 122 - ipc_heavy_traffic_deadlock_bug
+# exit code 5376
+# Output from process `ipc_heavy_traffic_deadlock_bug`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc.c on line 314: r == 0
+# Abort
+not ok 123 - ipc_listen_after_write
+# exit code 5376
+# Output from process `ipc_listen_after_write`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc.c on line 314: r == 0
+# Abort
+not ok 124 - ipc_listen_before_write
+# exit code 5376
+# Output from process `ipc_listen_before_write`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc.c on line 314: r == 0
+# Abort
+not ok 125 - ipc_send_recv_pipe
+# exit code 5376
+# Output from process `ipc_send_recv_pipe`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc.c on line 314: r == 0
+# Abort
+not ok 126 - ipc_send_recv_pipe_inprocess
+# exit code 5376
+# Output from process `ipc_send_recv_pipe_inprocess`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc-send-recv.c on line 366: status == 0
+# Abort
+not ok 127 - ipc_send_recv_tcp
+# exit code 5376
+# Output from process `ipc_send_recv_tcp`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc.c on line 314: r == 0
+# Abort
+not ok 128 - ipc_send_recv_tcp_inprocess
+# exit code 5376
+# Output from process `ipc_send_recv_tcp_inprocess`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc-send-recv.c on line 366: status == 0
+# Abort
+not ok 129 - ipc_tcp_connection
+# exit code 5376
+# Output from process `ipc_tcp_connection`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ipc.c on line 314: r == 0
+# Abort
+not ok 130 - kill
+# exit code 5376
+# Output from process `kill`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1026: r == 0
+# Abort
+ok 131 - kill_invalid_signum
+ok 132 - loop_alive
+ok 133 - loop_backend_timeout
+ok 134 - loop_close
+ok 135 - loop_configure
+ok 136 - loop_handles
+ok 137 - loop_instant_close
+ok 138 - loop_stop
+ok 139 - loop_update_time
+ok 140 - multiple_listen
+ok 141 - open_osfhandle_valid_handle
+ok 142 - pipe_bind_error_addrinuse
+ok 143 - pipe_bind_error_addrnotavail
+ok 144 - pipe_bind_error_inval
+ok 145 - pipe_close_stdout_read_stdin
+ok 146 - pipe_connect_bad_name
+not ok 147 - pipe_connect_multiple
+# exit code 5376
+# Output from process `pipe_connect_multiple`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-pipe-connect-multiple.c on line 47: status == 0
+# Abort
+ok 148 - pipe_connect_on_prepare
+not ok 149 - pipe_connect_to_file
+# exit code 5376
+# Output from process `pipe_connect_to_file`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-pipe-connect-error.c on line 53: status == UV_ENOTSOCK || status == UV_ECONNREFUSED
+# Abort
+ok 150 - pipe_getsockname
+ok 151 - pipe_getsockname_abstract
+ok 152 - pipe_getsockname_blocking
+ok 153 - pipe_listen_without_bind
+ok 154 - pipe_pending_instances
+not ok 155 - pipe_ping_pong
+# exit code 5376
+# Output from process `pipe_ping_pong`:
+# Connect error ETIMEDOUT
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/echo-server.c on line 144: status == 0
+# Abort
+Output from process `pipe_ping_pong`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ping-pong.c on line 156: status == 0
+# Abort
+not ok 156 - pipe_ping_pong_vec
+# exit code 5376
+# Output from process `pipe_ping_pong_vec`:
+# Connect error ETIMEDOUT
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/echo-server.c on line 144: status == 0
+# Abort
+Output from process `pipe_ping_pong_vec`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ping-pong.c on line 156: status == 0
+# Abort
+ok 157 - pipe_ref
+ok 158 - pipe_ref2
+not ok 159 - pipe_ref3
+# exit code 5376
+# Output from process `pipe_ref3`:
+# Connect error ETIMEDOUT
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/echo-server.c on line 144: status == 0
+# Abort
+Output from process `pipe_ref3`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ref.c on line 96: status == 0
+# Abort
+not ok 160 - pipe_ref4
+# exit code 5376
+# Output from process `pipe_ref4`:
+# Connect error ETIMEDOUT
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/echo-server.c on line 144: status == 0
+# Abort
+Output from process `pipe_ref4`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ref.c on line 87: status == 0
+# Abort
+ok 161 - pipe_sendmsg
+ok 162 - pipe_server_close
+ok 163 - pipe_set_chmod
+ok 164 - pipe_set_non_blocking
+not ok 165 - poll_bad_fdtype
+# exit code 5376
+# Output from process `poll_bad_fdtype`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-poll.c on line 618: 0 != uv_poll_init(uv_default_loop(), &poll_handle, fd)
+# Abort
+ok 166 - poll_close
+ok 167 - poll_close_doesnt_corrupt_stack # SKIP Test only relevant on Windows
+ok 168 - poll_closesocket # SKIP Test only relevant on Windows
+not ok 169 - poll_duplex
+# exit code 5376
+# Output from process `poll_duplex`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-poll.c on line 211: status == 0
+# Abort
+not ok 170 - poll_oob
+# exit code 5376
+# Output from process `poll_oob`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-poll-oob.c on line 99: n == 4
+# Abort
+not ok 171 - poll_unidirectional
+# exit code 5376
+# Output from process `poll_unidirectional`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-poll.c on line 211: status == 0
+# Abort
+ok 172 - prepare_ref
+not ok 173 - process_priority
+# exit code 5376
+# Output from process `process_priority`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-process-priority.c on line 55: priority == i
+# Abort
+not ok 174 - process_ref
+# exit code 5376
+# Output from process `process_ref`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-ref.c on line 421: r == 0
+# Abort
+not ok 175 - process_title
+# exit code 5376
+# Output from process `process_title`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-process-title.c on line 40: strcmp(buffer, title) == 0
+# Abort
+not ok 176 - process_title_threadsafe
+# exit code 5376
+# Output from process `process_title_threadsafe`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-process-title-threadsafe.c on line 50: 0 == strcmp(buffer, titles[0]) || 0 == strcmp(buffer, titles[1]) || 0 == strcmp(buffer, titles[2]) || 0 == strcmp(buffer, titles[3])
+# Abort
+ok 177 - queue_foreach_delete
+ok 178 - ref
+ok 179 - req_type_name
+ok 180 - run_nowait
+ok 181 - run_once
+ok 182 - semaphore_1
+ok 183 - semaphore_2
+ok 184 - semaphore_3
+not ok 185 - shutdown_close_pipe
+# exit code 5376
+# Output from process `shutdown_close_pipe`:
+# Connect error ETIMEDOUT
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/echo-server.c on line 144: status == 0
+# Abort
+Output from process `shutdown_close_pipe`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-shutdown-close.c on line 55: status == 0
+# Abort
+ok 186 - shutdown_close_tcp
+ok 187 - shutdown_eof
+ok 188 - shutdown_twice
+not ok 189 - signal_multiple_loops
+# exit code 5376
+# Output from process `signal_multiple_loops`:
+# uv_run_tests_a: /boot/home/Desktop/p/node-master/deps/uv/src/unix/linux-core.c:291:uv__io_poll: timeout != -1
+ok 190 - socket_buffer_size
+not ok 191 - spawn_and_kill
+# exit code 5376
+# Output from process `spawn_and_kill`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 732: r == 0
+# Abort
+not ok 192 - spawn_and_kill_with_std
+# exit code 5376
+# Output from process `spawn_and_kill_with_std`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 850: r == 0
+# Abort
+not ok 193 - spawn_and_ping
+# exit code 5376
+# Output from process `spawn_and_ping`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 899: r == 0
+# Abort
+not ok 194 - spawn_auto_unref
+# exit code 5376
+# Output from process `spawn_auto_unref`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1513: 0 == uv_spawn(uv_default_loop(), &process, &options)
+# Abort
+not ok 195 - spawn_closed_process_io
+# exit code 5376
+# Output from process `spawn_closed_process_io`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 990: 0 == uv_spawn(uv_default_loop(), &process, &options)
+# Abort
+not ok 196 - spawn_detached
+# exit code 5376
+# Output from process `spawn_detached`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 799: r == 0
+# Abort
+not ok 197 - spawn_exit_code
+# exit code 5376
+# Output from process `spawn_exit_code`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 235: r == 0
+# Abort
+not ok 198 - spawn_fails
+# exit code 5376
+# Output from process `spawn_fails`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 188: r == UV_ENOENT || r == UV_EACCES
+# Abort
+not ok 199 - spawn_fails_check_for_waitpid_cleanup
+# exit code 5376
+# Output from process `spawn_fails_check_for_waitpid_cleanup`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 208: r == UV_ENOENT || r == UV_EACCES
+# Abort
+not ok 200 - spawn_fs_open
+# exit code 5376
+# Output from process `spawn_fs_open`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1546: 0 == uv_spawn(uv_default_loop(), &process, &options)
+# Abort
+not ok 201 - spawn_ignored_stdio
+# exit code 5376
+# Output from process `spawn_ignored_stdio`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 713: r == 0
+# Abort
+not ok 202 - spawn_inherit_streams
+# exit code 5376
+# Output from process `spawn_inherit_streams`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1774: uv_spawn(loop, &child_req, &options) == 0
+# Abort
+not ok 203 - spawn_preserve_env
+# exit code 5376
+# Output from process `spawn_preserve_env`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 772: r == 0
+# Abort
+ok 204 - spawn_quoted_path # SKIP Test for Windows
+not ok 205 - spawn_reads_child_path
+# exit code 5376
+# Output from process `spawn_reads_child_path`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1679: r == 0
+# Abort
+not ok 206 - spawn_setgid_fails
+# exit code 5376
+# Output from process `spawn_setgid_fails`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1427: pw != NULL
+# Abort
+not ok 207 - spawn_setuid_fails
+# exit code 5376
+# Output from process `spawn_setuid_fails`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1392: pw != NULL
+# Abort
+not ok 208 - spawn_setuid_setgid
+# exit code 5376
+# Output from process `spawn_setuid_setgid`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 1356: pw != NULL
+# Abort
+not ok 209 - spawn_stdin
+# exit code 5376
+# Output from process `spawn_stdin`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 569: r == 0
+# Abort
+not ok 210 - spawn_stdio_greater_than_3
+# exit code 5376
+# Output from process `spawn_stdio_greater_than_3`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 608: r == 0
+# Abort
+not ok 211 - spawn_stdout
+# exit code 5376
+# Output from process `spawn_stdout`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 263: r == 0
+# Abort
+not ok 212 - spawn_stdout_and_stderr_to_file
+# exit code 5376
+# Output from process `spawn_stdout_and_stderr_to_file`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 363: r == 0
+# Abort
+not ok 213 - spawn_stdout_and_stderr_to_file2
+# exit code 5376
+# Output from process `spawn_stdout_and_stderr_to_file2`: (no output)
+not ok 214 - spawn_stdout_and_stderr_to_file_swap
+# exit code 5376
+# Output from process `spawn_stdout_and_stderr_to_file_swap`: (no output)
+not ok 215 - spawn_stdout_to_file
+# exit code 5376
+# Output from process `spawn_stdout_to_file`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 307: r == 0
+# Abort
+not ok 216 - spawn_tcp_server
+# exit code 5376
+# Output from process `spawn_tcp_server`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-spawn.c on line 691: r == 0
+# Abort
+not ok 217 - stdio_over_pipes
+# exit code 5376
+# Output from process `stdio_over_pipes`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-stdio-over-pipes.c on line 139: r == 0
+# Abort
+ok 218 - sys_error
+ok 219 - tcp6_ping_pong # SKIP IPv6 not supported
+ok 220 - tcp6_ping_pong_vec # SKIP IPv6 not supported
+ok 221 - tcp_alloc_cb_fail
+ok 222 - tcp_bind6_error_addrinuse # SKIP IPv6 not supported
+ok 223 - tcp_bind6_error_addrnotavail # SKIP IPv6 not supported
+ok 224 - tcp_bind6_error_fault # SKIP IPv6 not supported
+ok 225 - tcp_bind6_error_inval # SKIP IPv6 not supported
+ok 226 - tcp_bind6_localhost_ok # SKIP IPv6 not supported
+ok 227 - tcp_bind_error_addrinuse
+not ok 228 - tcp_bind_error_addrnotavail_1
+# exit code 5376
+# Output from process `tcp_bind_error_addrnotavail_1`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-bind-error.c on line 82: r == 0 || r == UV_EADDRNOTAVAIL
+# Abort
+not ok 229 - tcp_bind_error_addrnotavail_2
+# exit code 5376
+# Output from process `tcp_bind_error_addrnotavail_2`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-bind-error.c on line 105: r == UV_EADDRNOTAVAIL
+# Abort
+ok 230 - tcp_bind_error_fault
+not ok 231 - tcp_bind_error_inval
+# exit code 5376
+# Output from process `tcp_bind_error_inval`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-bind-error.c on line 158: r == UV_EINVAL
+# Abort
+ok 232 - tcp_bind_invalid_flags
+ok 233 - tcp_bind_localhost_ok
+not ok 234 - tcp_bind_writable_flags
+# exit code 5376
+# Output from process `tcp_bind_writable_flags`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-bind-error.c on line 240: r == UV_EPIPE
+# Abort
+ok 235 - tcp_close
+ok 236 - tcp_close_accept
+ok 237 - tcp_close_while_connecting
+ok 238 - tcp_connect_error_after_write
+ok 239 - tcp_connect_error_fault
+ok 240 - tcp_connect_timeout
+not ok 241 - tcp_create_early
+# exit code 5376
+# Output from process `tcp_create_early`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-create-socket-early.c on line 114: r == 0
+# Abort
+ok 242 - tcp_create_early_accept
+ok 243 - tcp_create_early_bad_bind # SKIP IPv6 not supported
+ok 244 - tcp_create_early_bad_domain
+ok 245 - tcp_flags
+ok 246 - tcp_listen_without_bind
+ok 247 - tcp_oob
+not ok 248 - tcp_open
+# exit code 5376
+# Output from process `tcp_open`: (no output)
+Output from process `tcp_open`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-open.c on line 117: nread == 4
+# Abort
+ok 249 - tcp_open_bound
+not ok 250 - tcp_open_connected
+# exit code 5376
+# Output from process `tcp_open_connected`: (no output)
+Output from process `tcp_open_connected`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-open.c on line 117: nread == 4
+# Abort
+ok 251 - tcp_open_twice
+not ok 252 - tcp_ping_pong
+# timeout
+# Output from process `tcp_ping_pong`: (no output)
+Output from process `tcp_ping_pong`:
+# PING
+# PONG 0
+# PING
+# PONG 1
+# PING
+# PONG 2
+# PING
+# PONG 3
+# PING
+# PONG 4
+# PING
+# PONG 5
+# PING
+# PONG 6
+# PING
+# PONG 7
+# PING
+# PONG 8
+# PING
+# PONG 9
+# PING
+# PONG 10
+# PING
+# PONG 11
+# PING
+# PONG 12
+# PING
+# PONG 13
+# PING
+# PONG 14
+# PING
+# PONG 15
+# PING
+# PONG 16
+# PING
+# PONG 17
+# PING
+# PONG 18
+# PING
+# PONG 19
+# PING
+# PONG 20
+# PING
+# PONG 21
+# PING
+# PONG 22
+# PING
+# PONG 23
+# PING
+# PONG 24
+# PING
+# PONG 25
+# PING
+# PONG 26
+# PING
+# PONG 27
+# PING
+# PONG 28
+# PING
+# PONG 29
+# PING
+# PONG 30
+# PING
+# PONG 31
+# PING
+# PONG 32
+# PING
+# PONG 33
+# PING
+# PONG 34
+# PING
+# PONG 35
+# PING
+# PONG 36
+# PING
+# PONG 37
+# PING
+# PONG 38
+# PING
+# PONG 39
+# PING
+# PONG 40
+# PING
+# PONG 41
+# PING
+# PONG 42
+# PING
+# PONG 43
+# PING
+# PONG 44
+# PING
+# PONG 45
+# PING
+# PONG 46
+# PING
+# PONG 47
+# PING
+# PONG 48
+# PING
+# PONG 49
+# PING
+# PONG 50
+# PING
+# PONG 51
+# PING
+# PONG 52
+# PING
+# PONG 53
+# PING
+# PONG 54
+# PING
+# PONG 55
+# PING
+# PONG 56
+# PING
+# PONG 57
+# PING
+# PONG 58
+# PING
+# PONG 59
+# PING
+# PONG 60
+# PING
+# PONG 61
+# PING
+# PONG 62
+# PING
+# PONG 63
+# PING
+# PONG 64
+# PING
+# PONG 65
+# PING
+# PONG 66
+# PING
+# PONG 67
+# PING
+# PONG 68
+# PING
+# PONG 69
+# PING
+# PONG 70
+# PING
+# PONG 71
+# PING
+# PONG 72
+# PING
+# PONG 73
+# PING
+# PONG 74
+# PING
+# PONG 75
+# PING
+# PONG 76
+# PING
+# PONG 77
+# PING
+# PONG 78
+# PING
+# PONG 79
+# PING
+# PONG 80
+# PING
+# PONG 81
+# PING
+# PONG 82
+# PING
+# PONG 83
+# PING
+# PONG 84
+# PING
+# PONG 85
+# PING
+# PONG 86
+# PING
+# PONG 87
+# PING
+# PONG 88
+# PING
+# PONG 89
+# PING
+# PONG 90
+# PING
+# PONG 91
+# PING
+# PONG 92
+# PING
+# PONG 93
+# PING
+# PONG 94
+# PING
+# PONG 95
+# PING
+# PONG 96
+# PING
+# PONG 97
+# PING
+# PONG 98
+# PING
+# PONG 99
+# PING
+# PONG 100
+# PING
+# PONG 101
+# PING
+# PONG 102
+# PING
+# PONG 103
+# PING
+# PONG 104
+# PING
+# PONG 105
+# PING
+# PONG 106
+# PING
+# PONG 107
+# PING
+# PONG 108
+# PING
+# PONG 109
+# PING
+# PONG 110
+# PING
+# PONG 111
+# PING
+# PONG 112
+# PING
+# PONG 113
+# PING
+# PONG 114
+# PING
+# PONG 115
+# PING
+# PONG 116
+# PING
+# PONG 117
+# PING
+# PONG 118
+# PING
+# PONG 119
+# PING
+# PONG 120
+# PING
+# PONG 121
+# PING
+# PONG 122
+# PING
+# PONG 123
+# PING
+# PONG 124
+# PING
+# PONG 125
+# PING
+# PONG 126
+# PING
+# PONG 127
+# PING
+# PONG 128
+# PING
+# PONG 129
+# PING
+# PONG 130
+# PING
+# PONG 131
+# PING
+# PONG 132
+# PING
+# PONG 133
+# PING
+# PONG 134
+# PING
+# PONG 135
+# PING
+# PONG 136
+# PING
+# PONG 137
+# PING
+# PONG 138
+# PING
+# PONG 139
+# PING
+# PONG 140
+# PING
+# PONG 141
+# PING
+# PONG 142
+# PING
+# PONG 143
+# PING
+# PONG 144
+# PING
+# PONG 145
+# PING
+# PONG 146
+# PING
+# PONG 147
+# PING
+# PONG 148
+# PING
+# PONG 149
+# PING
+# PONG 150
+# PING
+# PONG 151
+# PING
+# PONG 152
+# PING
+# PONG 153
+# PING
+# PONG 154
+# PING
+# PONG 155
+# PING
+# PONG 156
+# PING
+# PONG 157
+# PING
+# PONG 158
+# PING
+# PONG 159
+# PING
+# PONG 160
+# PING
+# PONG 161
+# PING
+# PONG 162
+# PING
+# PONG 163
+# PING
+# PONG 164
+# PING
+# PONG 165
+# PING
+# PONG 166
+# PING
+# PONG 167
+# PING
+# PONG 168
+# PING
+# PONG 169
+# PING
+# PONG 170
+# PING
+# PONG 171
+# PING
+# PONG 172
+# PING
+# PONG 173
+# PING
+# PONG 174
+# PING
+# PONG 175
+# PING
+# PONG 176
+# PING
+# PONG 177
+# PING
+# PONG 178
+# PING
+# PONG 179
+# PING
+# PONG 180
+# PING
+# PONG 181
+# PING
+# PONG 182
+# PING
+# PONG 183
+# PING
+# PONG 184
+# PING
+# PONG 185
+# PING
+# PONG 186
+# PING
+# PONG 187
+# PING
+# PONG 188
+# PING
+# PONG 189
+# PING
+# PONG 190
+# PING
+# PONG 191
+# PING
+# PONG 192
+# PING
+# PONG 193
+# PING
+# PONG 194
+# PING
+# PONG 195
+# PING
+# PONG 196
+# PING
+# PONG 197
+# PING
+# PONG 198
+# PING
+# PONG 199
+# PING
+# PONG 200
+# PING
+# PONG 201
+# PING
+# PONG 202
+# PING
+# PONG 203
+# PING
+# PONG 204
+# PING
+# PONG 205
+# PING
+# PONG 206
+# PING
+# PONG 207
+# PING
+# PONG 208
+# PING
+# PONG 209
+# PING
+# PONG 210
+# PING
+# PONG 211
+# PING
+# PONG 212
+# PING
+# PONG 213
+# PING
+# PONG 214
+# PING
+# PONG 215
+# PING
+# PONG 216
+# PING
+# PONG 217
+# PING
+# PONG 218
+# PING
+# PONG 219
+# PING
+# PONG 220
+# PING
+# PONG 221
+# PING
+# PONG 222
+# PING
+# PONG 223
+# PING
+# PONG 224
+# PING
+# PONG 225
+# PING
+# PONG 226
+# PING
+# PONG 227
+# PING
+# PONG 228
+# PING
+# PONG 229
+# PING
+# PONG 230
+# PING
+# PONG 231
+# PING
+# PONG 232
+# PING
+# PONG 233
+# PING
+# PONG 234
+# PING
+# PONG 235
+# PING
+# PONG 236
+# PING
+# PONG 237
+# PING
+# PONG 238
+# PING
+# PONG 239
+# PING
+# PONG 240
+# PING
+# PONG 241
+# PING
+# PONG 242
+# PING
+# PONG 243
+# PING
+# PONG 244
+# PING
+# PONG 245
+# PING
+# PONG 246
+# PING
+# PONG 247
+# PING
+# PONG 248
+# PING
+# PONG 249
+# PING
+# PONG 250
+# PING
+# PONG 251
+# PING
+# PONG 252
+# PING
+# PONG 253
+# PING
+# PONG 254
+# PING
+# PONG 255
+# PING
+# PONG 256
+# PING
+# PONG 257
+# PING
+# PONG 258
+# PING
+# PONG 259
+# PING
+# PONG 260
+# PING
+# PONG 261
+# PING
+# PONG 262
+# PING
+# PONG 263
+# PING
+# PONG 264
+# PING
+# PONG 265
+# PING
+# PONG 266
+# PING
+# PONG 267
+# PING
+# PONG 268
+# PING
+# PONG 269
+# PING
+# PONG 270
+# PING
+# PONG 271
+# PING
+# PONG 272
+# PING
+# PONG 273
+# PING
+# PONG 274
+# PING
+# PONG 275
+# PING
+# PONG 276
+# PING
+# PONG 277
+# PING
+# PONG 278
+# PING
+# PONG 279
+# PING
+# PONG 280
+# PING
+# PONG 281
+# PING
+# PONG 282
+# PING
+# PONG 283
+# PING
+# PONG 284
+# PING
+# PONG 285
+# PING
+# PONG 286
+# PING
+# PONG 287
+# PING
+# PONG 288
+# PING
+# PONG 289
+# PING
+# PONG 290
+# PING
+# PONG 291
+# PING
+# PONG 292
+# PING
+# PONG 293
+# PING
+# PONG 294
+# PING
+# PONG 295
+# PING
+# PONG 296
+# PING
+# PONG 297
+# PING
+# PONG 298
+# PING
+# PONG 299
+# PING
+# PONG 300
+# PING
+# PONG 301
+# PING
+# PONG 302
+# PING
+# PONG 303
+# PING
+# PONG 304
+# PING
+# PONG 305
+# PING
+# PONG 306
+# PING
+# PONG 307
+# PING
+# PONG 308
+# PING
+# PONG 309
+# PING
+# PONG 310
+# PING
+# PONG 311
+# PING
+# PONG 312
+# PING
+# PONG 313
+# PING
+# PONG 314
+# PING
+# PONG 315
+# PING
+# PONG 316
+# PING
+# PONG 317
+# PING
+# PONG 318
+# PING
+# PONG 319
+# PING
+# PONG 320
+# PING
+# PONG 321
+# PING
+# PONG 322
+# PING
+# PONG 323
+# PING
+# PONG 324
+# PING
+# PONG 325
+# PING
+# PONG 326
+# PING
+# PONG 327
+# PING
+# PONG 328
+# PING
+# PONG 329
+# PING
+# PONG 330
+# PING
+# PONG 331
+# PING
+# PONG 332
+# PING
+# PONG 333
+# PING
+# PONG 334
+# PING
+# PONG 335
+# PING
+# PONG 336
+# PING
+# PONG 337
+# PING
+# PONG 338
+# PING
+# PONG 339
+# PING
+# PONG 340
+# PING
+# PONG 341
+# PING
+# PONG 342
+# PING
+# PONG 343
+# PING
+# PONG 344
+# PING
+# PONG 345
+# PING
+# PONG 346
+# PING
+# PONG 347
+# PING
+# PONG 348
+# PING
+# PONG 349
+# PING
+# PONG 350
+# PING
+# PONG 351
+# PING
+# PONG 352
+# PING
+# PONG 353
+# PING
+# PONG 354
+# PING
+# PONG 355
+# PING
+# PONG 356
+# PING
+# PONG 357
+# PING
+# PONG 358
+# PING
+# PONG 359
+# PING
+# PONG 360
+# PING
+# PONG 361
+# PING
+# PONG 362
+# PING
+# PONG 363
+# PING
+# PONG 364
+# PING
+# PONG 365
+# PING
+# PONG 366
+# PING
+# PONG 367
+# PING
+# PONG 368
+# PING
+# PONG 369
+# PING
+# PONG 370
+# PING
+# PONG 371
+# PING
+# PONG 372
+# PING
+# PONG 373
+# PING
+# PONG 374
+# PING
+# PONG 375
+# PING
+# PONG 376
+# PING
+# PONG 377
+# PING
+# PONG 378
+# PING
+# PONG 379
+# PING
+# PONG 380
+# PING
+# PONG 381
+# PING
+# PONG 382
+# PING
+# PONG 383
+# PING
+# PONG 384
+# PING
+# PONG 385
+# PING
+# PONG 386
+# PING
+# PONG 387
+# PING
+# PONG 388
+# PING
+# PONG 389
+# PING
+# PONG 390
+# PING
+# PONG 391
+# PING
+# PONG 392
+# PING
+# PONG 393
+# PING
+# PONG 394
+# PING
+# PONG 395
+# PING
+# PONG 396
+# PING
+# PONG 397
+# PING
+# PONG 398
+# PING
+# PONG 399
+# PING
+# PONG 400
+# PING
+# PONG 401
+# PING
+# PONG 402
+# PING
+# PONG 403
+# PING
+# PONG 404
+# PING
+# PONG 405
+# PING
+# PONG 406
+# PING
+# PONG 407
+# PING
+# PONG 408
+# PING
+# PONG 409
+# PING
+# PONG 410
+# PING
+# PONG 411
+# PING
+# PONG 412
+# PING
+# PONG 413
+# PING
+# PONG 414
+# PING
+# PONG 415
+# PING
+# PONG 416
+# PING
+# PONG 417
+# PING
+# PONG 418
+# PING
+# PONG 419
+# PING
+# PONG 420
+# PING
+# PONG 421
+# PING
+# PONG 422
+# PING
+# PONG 423
+# PING
+# PONG 424
+# PING
+# PONG 425
+# PING
+# PONG 426
+# PING
+# PONG 427
+# PING
+# PONG 428
+# PING
+# PONG 429
+# PING
+# PONG 430
+# PING
+# PONG 431
+# PING
+# PONG 432
+# PING
+# PONG 433
+# PING
+# PONG 434
+# PING
+# PONG 435
+# PING
+# PONG 436
+# PING
+# PONG 437
+# PING
+# PONG 438
+# PING
+# PONG 439
+# PING
+# PONG 440
+# PING
+# PONG 441
+# PING
+# PONG 442
+# PING
+# PONG 443
+# PING
+# PONG 444
+# PING
+# PONG 445
+# PING
+# PONG 446
+# PING
+# PONG 447
+# PING
+# PONG 448
+# PING
+# PONG 449
+# PING
+# PONG 450
+# PING
+# PONG 451
+# PING
+# PONG 452
+# PING
+# PONG 453
+# PING
+# PONG 454
+# PING
+# PONG 455
+# PING
+# PONG 456
+# PING
+# PONG 457
+# PING
+# PONG 458
+# PING
+# PONG 459
+# PING
+# PONG 460
+# PING
+# PONG 461
+# PING
+# PONG 462
+# PING
+# PONG 463
+# PING
+# PONG 464
+# PING
+# PONG 465
+# PING
+# PONG 466
+# PING
+# PONG 467
+# PING
+# PONG 468
+# PING
+# PONG 469
+# PING
+# PONG 470
+# PING
+# PONG 471
+# PING
+# PONG 472
+# PING
+# PONG 473
+# PING
+# PONG 474
+# PING
+# PONG 475
+# PING
+# PONG 476
+# PING
+# PONG 477
+# PING
+# PONG 478
+# PING
+# PONG 479
+# PING
+# PONG 480
+# PING
+# PONG 481
+# PING
+# PONG 482
+# PING
+# PONG 483
+# PING
+# PONG 484
+# PING
+# PONG 485
+# PING
+# PONG 486
+# PING
+# PONG 487
+# PING
+# PONG 488
+# PING
+# PONG 489
+# PING
+# PONG 490
+# PING
+# PONG 491
+# PING
+# PONG 492
+# PING
+# PONG 493
+# PING
+# PONG 494
+# PING
+# PONG 495
+# PING
+# PONG 496
+# PING
+# PONG 497
+# PING
+# PONG 498
+# PING
+# PONG 499
+# PING
+# PONG 500
+# PING
+# PONG 501
+# PING
+# PONG 502
+# PING
+# PONG 503
+# PING
+# PONG 504
+# PING
+# PONG 505
+# PING
+# PONG 506
+# PING
+# PONG 507
+# PING
+# PONG 508
+# PING
+# PONG 509
+# PING
+# PONG 510
+# PING
+# PONG 511
+# PING
+# PONG 512
+# PING
+# PONG 513
+# PING
+# PONG 514
+# PING
+# PONG 515
+# PING
+# PONG 516
+# PING
+# PONG 517
+# PING
+# PONG 518
+# PING
+# PONG 519
+# PING
+# PONG 520
+# PING
+# PONG 521
+# PING
+# PONG 522
+# PING
+# PONG 523
+# PING
+# PONG 524
+# PING
+# PONG 525
+# PING
+# PONG 526
+# PING
+# PONG 527
+# PING
+# PONG 528
+# PING
+# PONG 529
+# PING
+# PONG 530
+# PING
+# PONG 531
+# PING
+# PONG 532
+# PING
+# PONG 533
+# PING
+# PONG 534
+# PING
+# PONG 535
+# PING
+# PONG 536
+# PING
+# PONG 537
+# PING
+# PONG 538
+# PING
+# PONG 539
+# PING
+# PONG 540
+# PING
+# PONG 541
+# PING
+# PONG 542
+# PING
+# PONG 543
+# PING
+# PONG 544
+# PING
+# PONG 545
+# PING
+# PONG 546
+# PING
+# PONG 547
+# PING
+# PONG 548
+# PING
+# PONG 549
+# PING
+# PONG 550
+# PING
+# PONG 551
+# PING
+# PONG 552
+# PING
+# PONG 553
+# PING
+# PONG 554
+# PING
+# PONG 555
+# PING
+# PONG 556
+# PING
+# PONG 557
+# PING
+# PONG 558
+# PING
+# PONG 559
+# PING
+# PONG 560
+# PING
+# PONG 561
+# PING
+# PONG 562
+# PING
+# PONG 563
+# PING
+# PONG 564
+# PING
+# PONG 565
+# PING
+# PONG 566
+# PING
+# PONG 567
+# PING
+# PONG 568
+# PING
+# PONG 569
+# PING
+# PONG 570
+# PING
+# PONG 571
+# PING
+# PONG 572
+# PING
+# PONG 573
+# PING
+# PONG 574
+# PING
+# PONG 575
+# PING
+# PONG 576
+# PING
+# PONG 577
+# PING
+# PONG 578
+# PING
+# PONG 579
+# PING
+# PONG 580
+# PING
+# PONG 581
+# PING
+# PONG 582
+# PING
+# PONG 583
+# PING
+# PONG 584
+# PING
+# PONG 585
+# PING
+# PONG 586
+# PING
+# PONG 587
+# PING
+# PONG 588
+# PING
+# PONG 589
+# PING
+# PONG 590
+# PING
+# PONG 591
+# PING
+# PONG 592
+# PING
+# PONG 593
+# PING
+# PONG 594
+# PING
+# PONG 595
+# PING
+# PONG 596
+# PING
+# PONG 597
+# PING
+# PONG 598
+# PING
+# PONG 599
+# PING
+# PONG 600
+# PING
+# PONG 601
+# PING
+# PONG 602
+# PING
+# PONG 603
+# PING
+# PONG 604
+# PING
+# PONG 605
+# PING
+# PONG 606
+# PING
+# PONG 607
+# PING
+# PONG 608
+# PING
+# PONG 609
+# PING
+# PONG 610
+# PING
+# PONG 611
+# PING
+# PONG 612
+# PING
+# PONG 613
+# PING
+# PONG 614
+# PING
+# PONG 615
+# PING
+# PONG 616
+# PING
+# PONG 617
+# PING
+# PONG 618
+# PING
+# PONG 619
+# PING
+# PONG 620
+# PING
+# PONG 621
+# PING
+# PONG 622
+# PING
+# PONG 623
+# PING
+# PONG 624
+# PING
+# PONG 625
+# PING
+# PONG 626
+# PING
+# PONG 627
+# PING
+# PONG 628
+# PING
+# PONG 629
+# PING
+# PONG 630
+# PING
+# PONG 631
+# PING
+# PONG 632
+# PING
+# PONG 633
+# PING
+# PONG 634
+# PING
+# PONG 635
+# PING
+# PONG 636
+# PING
+# PONG 637
+# PING
+# PONG 638
+# PING
+# PONG 639
+# PING
+# PONG 640
+# PING
+# PONG 641
+# PING
+# PONG 642
+# PING
+# PONG 643
+# PING
+# PONG 644
+# PING
+# PONG 645
+# PING
+# PONG 646
+# PING
+# PONG 647
+# PING
+# PONG 648
+# PING
+# PONG 649
+# PING
+# PONG 650
+# PING
+# PONG 651
+# PING
+# PONG 652
+# PING
+# PONG 653
+# PING
+# PONG 654
+# PING
+# PONG 655
+# PING
+# PONG 656
+# PING
+# PONG 657
+# PING
+# PONG 658
+# PING
+# PONG 659
+# PING
+# PONG 660
+# PING
+# PONG 661
+# PING
+# PONG 662
+# PING
+# PONG 663
+# PING
+# PONG 664
+# PING
+# PONG 665
+# PING
+# PONG 666
+# PING
+# PONG 667
+# PING
+# PONG 668
+# PING
+# PONG 669
+# PING
+# PONG 670
+# PING
+# PONG 671
+# PING
+# PONG 672
+# PING
+# PONG 673
+# PING
+# PONG 674
+# PING
+# PONG 675
+# PING
+# PONG 676
+# PING
+# PONG 677
+# PING
+# PONG 678
+# PING
+# PONG 679
+# PING
+# PONG 680
+# PING
+# PONG 681
+# PING
+# PONG 682
+# PING
+# PONG 683
+# PING
+# PONG 684
+# PING
+# PONG 685
+# PING
+# PONG 686
+# PING
+# PONG 687
+# PING
+# PONG 688
+# PING
+# PONG 689
+# PING
+# PONG 690
+# PING
+# PONG 691
+# PING
+# PONG 692
+# PING
+# PONG 693
+# PING
+# PONG 694
+# PING
+# PONG 695
+# PING
+# PONG 696
+# PING
+# PONG 697
+# PING
+# PONG 698
+# PING
+# PONG 699
+# PING
+# PONG 700
+# PING
+# PONG 701
+# PING
+# PONG 702
+# PING
+# PONG 703
+# PING
+# PONG 704
+# PING
+# PONG 705
+# PING
+# PONG 706
+# PING
+# PONG 707
+# PING
+# PONG 708
+# PING
+# PONG 709
+# PING
+# PONG 710
+# PING
+# PONG 711
+# PING
+# PONG 712
+# PING
+# PONG 713
+# PING
+# PONG 714
+# PING
+# PONG 715
+# PING
+# PONG 716
+# PING
+# PONG 717
+# PING
+# PONG 718
+# PING
+# PONG 719
+# PING
+# PONG 720
+# PING
+# PONG 721
+# PING
+# PONG 722
+# PING
+# PONG 723
+# PING
+# PONG 724
+# PING
+# PONG 725
+# PING
+# PONG 726
+# PING
+# PONG 727
+# PING
+# PONG 728
+# PING
+# PONG 729
+# PING
+# PONG 730
+# PING
+# PONG 731
+# PING
+# PONG 732
+# PING
+# PONG 733
+# PING
+# PONG 734
+# PING
+# PONG 735
+# PING
+# PONG 736
+# PING
+# PONG 737
+# PING
+# PONG 738
+# PING
+# PONG 739
+# PING
+# PONG 740
+# PING
+# PONG 741
+# PING
+# PONG 742
+# PING
+# PONG 743
+# PING
+# PONG 744
+# PING
+# PONG 745
+# PING
+# PONG 746
+# PING
+# PONG 747
+# PING
+# PONG 748
+# PING
+# PONG 749
+# PING
+# PONG 750
+# PING
+# PONG 751
+# PING
+# PONG 752
+# PING
+# PONG 753
+# PING
+# PONG 754
+# PING
+# PONG 755
+# PING
+# PONG 756
+# PING
+# PONG 757
+# PING
+# PONG 758
+# PING
+# PONG 759
+# PING
+# PONG 760
+# PING
+# PONG 761
+# PING
+# PONG 762
+# PING
+# PONG 763
+# PING
+# PONG 764
+# PING
+# PONG 765
+# PING
+# PONG 766
+# PING
+# PONG 767
+# PING
+# PONG 768
+# PING
+# PONG 769
+# PING
+# PONG 770
+# PING
+# PONG 771
+# PING
+# PONG 772
+# PING
+# PONG 773
+# PING
+# PONG 774
+# PING
+# PONG 775
+# PING
+# PONG 776
+# PING
+# PONG 777
+# PING
+# PONG 778
+# PING
+# PONG 779
+# PING
+# PONG 780
+# PING
+# PONG 781
+# PING
+# PONG 782
+# PING
+# PONG 783
+# PING
+# PONG 784
+# PING
+# PONG 785
+# PING
+# PONG 786
+# PING
+# PONG 787
+# PING
+# PONG 788
+# PING
+# PONG 789
+# PING
+# PONG 790
+# PING
+# PONG 791
+# PING
+# PONG 792
+# PING
+# PONG 793
+# PING
+# PONG 794
+# PING
+# PONG 795
+# PING
+# PONG 796
+# PING
+# PONG 797
+# PING
+# PONG 798
+# PING
+# PONG 799
+# PING
+# PONG 800
+# PING
+# PONG 801
+# PING
+# PONG 802
+# PING
+# PONG 803
+# PING
+# PONG 804
+# PING
+# PONG 805
+# PING
+# PONG 806
+# PING
+# PONG 807
+# PING
+# PONG 808
+# PING
+# PONG 809
+# PING
+# PONG 810
+# PING
+# PONG 811
+# PING
+# PONG 812
+# PING
+# PONG 813
+# PING
+# PONG 814
+# PING
+# PONG 815
+# PING
+# PONG 816
+# PING
+# PONG 817
+# PING
+# PONG 818
+# PING
+# PONG 819
+# PING
+# PONG 820
+# PING
+# PONG 821
+# PING
+# PONG 822
+# PING
+# PONG 823
+# PING
+# PONG 824
+# PING
+# PONG 825
+# PING
+# PONG 826
+# PING
+# PONG 827
+# PING
+# PONG 828
+# PING
+# PONG 829
+# PING
+# PONG 830
+# PING
+# PONG 831
+# PING
+# PONG 832
+# PING
+# PONG 833
+# PING
+# PONG 834
+# PING
+# PONG 835
+# PING
+# PONG 836
+# PING
+# PONG 837
+# PING
+# PONG 838
+# PING
+# PONG 839
+# PING
+# PONG 840
+# PING
+# PONG 841
+# PING
+# PONG 842
+# PING
+# PONG 843
+# PING
+# PONG 844
+# PING
+# PONG 845
+# PING
+# PONG 846
+# PING
+# PONG 847
+# PING
+# PONG 848
+# PING
+# PONG 849
+# PING
+# PONG 850
+# PING
+# PONG 851
+# PING
+# PONG 852
+# PING
+# PONG 853
+# PING
+# PONG 854
+# PING
+# PONG 855
+# PING
+# PONG 856
+# PING
+# PONG 857
+# PING
+# PONG 858
+# PING
+# PONG 859
+# PING
+# PONG 860
+# PING
+# PONG 861
+# PING
+# PONG 862
+# PING
+# PONG 863
+# PING
+# PONG 864
+# PING
+# PONG 865
+# PING
+# PONG 866
+# PING
+# PONG 867
+# PING
+# PONG 868
+# PING
+# PONG 869
+# PING
+# PONG 870
+# PING
+# PONG 871
+# PING
+# PONG 872
+# PING
+# PONG 873
+# PING
+# PONG 874
+# PING
+# PONG 875
+# PING
+# PONG 876
+# PING
+# PONG 877
+# PING
+# PONG 878
+# PING
+# PONG 879
+# PING
+# PONG 880
+# PING
+# PONG 881
+# PING
+# PONG 882
+# PING
+# PONG 883
+# PING
+# PONG 884
+# PING
+# PONG 885
+# PING
+# PONG 886
+# PING
+# PONG 887
+# PING
+# PONG 888
+# PING
+# PONG 889
+# PING
+# PONG 890
+# PING
+# PONG 891
+# PING
+# PONG 892
+# PING
+# PONG 893
+# PING
+# PONG 894
+# PING
+# PONG 895
+# PING
+# PONG 896
+# PING
+# PONG 897
+# PING
+# PONG 898
+# PING
+# PONG 899
+# PING
+# PONG 900
+# PING
+# PONG 901
+# PING
+# PONG 902
+# PING
+# PONG 903
+# PING
+# PONG 904
+# PING
+# PONG 905
+# PING
+# PONG 906
+# PING
+# PONG 907
+# PING
+# PONG 908
+# PING
+# PONG 909
+# PING
+# PONG 910
+# PING
+# PONG 911
+# PING
+# PONG 912
+# PING
+# PONG 913
+# PING
+# PONG 914
+# PING
+# PONG 915
+# PING
+# PONG 916
+# PING
+# PONG 917
+# PING
+# PONG 918
+# PING
+# PONG 919
+# PING
+# PONG 920
+# PING
+# PONG 921
+# PING
+# PONG 922
+# PING
+# PONG 923
+# PING
+# PONG 924
+# PING
+# PONG 925
+# PING
+# PONG 926
+# PING
+# PONG 927
+# PING
+# PONG 928
+# PING
+# PONG 929
+# PING
+# PONG 930
+# PING
+# PONG 931
+# PING
+# PONG 932
+# PING
+# PONG 933
+# PING
+# PONG 934
+# PING
+# PONG 935
+# PING
+# PONG 936
+# PING
+# PONG 937
+# PING
+# PONG 938
+# PING
+# PONG 939
+# PING
+# PONG 940
+# PING
+# PONG 941
+# PING
+# PONG 942
+# PING
+# PONG 943
+# PING
+# PONG 944
+# PING
+# PONG 945
+# PING
+# PONG 946
+# PING
+# PONG 947
+# PING
+# PONG 948
+# PING
+# PONG 949
+# PING
+# PONG 950
+# PING
+# PONG 951
+# PING
+# PONG 952
+# PING
+# PONG 953
+# PING
+# PONG 954
+# PING
+# PONG 955
+# PING
+# PONG 956
+# PING
+# PONG 957
+# PING
+# PONG 958
+# PING
+# PONG 959
+# PING
+# PONG 960
+# PING
+# PONG 961
+# PING
+# PONG 962
+# PING
+# PONG 963
+# PING
+# PONG 964
+# PING
+# PONG 965
+# PING
+# PONG 966
+# PING
+# PONG 967
+# PING
+# PONG 968
+# PING
+# PONG 969
+# PING
+# PONG 970
+# PING
+# PONG 971
+# PING
+# PONG 972
+# PING
+# PONG 973
+# PING
+# PONG 974
+# PING
+# PONG 975
+# PING
+# PONG 976
+# PING
+# PONG 977
+# PING
+# PONG 978
+# PING
+# PONG 979
+# PING
+# PONG 980
+# PING
+# PONG 981
+# PING
+# PONG 982
+# PING
+# PONG 983
+# PING
+# PONG 984
+# PING
+# PONG 985
+# PING
+# PONG 986
+# PING
+# PONG 987
+# PING
+# PONG 988
+# PING
+# PONG 989
+# PING
+# PONG 990
+# PING
+# PONG 991
+# PING
+# PONG 992
+# PING
+# PONG 993
+# PING
+# PONG 994
+# PING
+# PONG 995
+# PING
+# PONG 996
+# PING
+# PONG 997
+# PING
+not ok 253 - tcp_ping_pong_vec
+# timeout
+# Output from process `tcp_ping_pong_vec`: (no output)
+Output from process `tcp_ping_pong_vec`:
+# PING
+# PONG 0
+# PING
+# PONG 1
+# PING
+# PONG 2
+# PING
+# PONG 3
+# PING
+# PONG 4
+# PING
+# PONG 5
+# PING
+# PONG 6
+# PING
+# PONG 7
+# PING
+# PONG 8
+# PING
+# PONG 9
+# PING
+# PONG 10
+# PING
+# PONG 11
+# PING
+# PONG 12
+# PING
+# PONG 13
+# PING
+# PONG 14
+# PING
+# PONG 15
+# PING
+# PONG 16
+# PING
+# PONG 17
+# PING
+# PONG 18
+# PING
+# PONG 19
+# PING
+# PONG 20
+# PING
+# PONG 21
+# PING
+# PONG 22
+# PING
+# PONG 23
+# PING
+# PONG 24
+# PING
+# PONG 25
+# PING
+# PONG 26
+# PING
+# PONG 27
+# PING
+# PONG 28
+# PING
+# PONG 29
+# PING
+# PONG 30
+# PING
+# PONG 31
+# PING
+# PONG 32
+# PING
+# PONG 33
+# PING
+# PONG 34
+# PING
+# PONG 35
+# PING
+# PONG 36
+# PING
+# PONG 37
+# PING
+# PONG 38
+# PING
+# PONG 39
+# PING
+# PONG 40
+# PING
+# PONG 41
+# PING
+# PONG 42
+# PING
+# PONG 43
+# PING
+# PONG 44
+# PING
+# PONG 45
+# PING
+# PONG 46
+# PING
+# PONG 47
+# PING
+# PONG 48
+# PING
+# PONG 49
+# PING
+# PONG 50
+# PING
+# PONG 51
+# PING
+# PONG 52
+# PING
+# PONG 53
+# PING
+# PONG 54
+# PING
+# PONG 55
+# PING
+# PONG 56
+# PING
+# PONG 57
+# PING
+# PONG 58
+# PING
+# PONG 59
+# PING
+# PONG 60
+# PING
+# PONG 61
+# PING
+# PONG 62
+# PING
+# PONG 63
+# PING
+# PONG 64
+# PING
+# PONG 65
+# PING
+# PONG 66
+# PING
+# PONG 67
+# PING
+# PONG 68
+# PING
+# PONG 69
+# PING
+# PONG 70
+# PING
+# PONG 71
+# PING
+# PONG 72
+# PING
+# PONG 73
+# PING
+# PONG 74
+# PING
+# PONG 75
+# PING
+# PONG 76
+# PING
+# PONG 77
+# PING
+# PONG 78
+# PING
+# PONG 79
+# PING
+# PONG 80
+# PING
+# PONG 81
+# PING
+# PONG 82
+# PING
+# PONG 83
+# PING
+# PONG 84
+# PING
+# PONG 85
+# PING
+# PONG 86
+# PING
+# PONG 87
+# PING
+# PONG 88
+# PING
+# PONG 89
+# PING
+# PONG 90
+# PING
+# PONG 91
+# PING
+# PONG 92
+# PING
+# PONG 93
+# PING
+# PONG 94
+# PING
+# PONG 95
+# PING
+# PONG 96
+# PING
+# PONG 97
+# PING
+# PONG 98
+# PING
+# PONG 99
+# PING
+# PONG 100
+# PING
+# PONG 101
+# PING
+# PONG 102
+# PING
+# PONG 103
+# PING
+# PONG 104
+# PING
+# PONG 105
+# PING
+# PONG 106
+# PING
+# PONG 107
+# PING
+# PONG 108
+# PING
+# PONG 109
+# PING
+# PONG 110
+# PING
+# PONG 111
+# PING
+# PONG 112
+# PING
+# PONG 113
+# PING
+# PONG 114
+# PING
+# PONG 115
+# PING
+# PONG 116
+# PING
+# PONG 117
+# PING
+# PONG 118
+# PING
+# PONG 119
+# PING
+# PONG 120
+# PING
+# PONG 121
+# PING
+# PONG 122
+# PING
+# PONG 123
+# PING
+# PONG 124
+# PING
+# PONG 125
+# PING
+# PONG 126
+# PING
+# PONG 127
+# PING
+# PONG 128
+# PING
+# PONG 129
+# PING
+# PONG 130
+# PING
+# PONG 131
+# PING
+# PONG 132
+# PING
+# PONG 133
+# PING
+# PONG 134
+# PING
+# PONG 135
+# PING
+# PONG 136
+# PING
+# PONG 137
+# PING
+# PONG 138
+# PING
+# PONG 139
+# PING
+# PONG 140
+# PING
+# PONG 141
+# PING
+# PONG 142
+# PING
+# PONG 143
+# PING
+# PONG 144
+# PING
+# PONG 145
+# PING
+# PONG 146
+# PING
+# PONG 147
+# PING
+# PONG 148
+# PING
+# PONG 149
+# PING
+# PONG 150
+# PING
+# PONG 151
+# PING
+# PONG 152
+# PING
+# PONG 153
+# PING
+# PONG 154
+# PING
+# PONG 155
+# PING
+# PONG 156
+# PING
+# PONG 157
+# PING
+# PONG 158
+# PING
+# PONG 159
+# PING
+# PONG 160
+# PING
+# PONG 161
+# PING
+# PONG 162
+# PING
+# PONG 163
+# PING
+# PONG 164
+# PING
+# PONG 165
+# PING
+# PONG 166
+# PING
+# PONG 167
+# PING
+# PONG 168
+# PING
+# PONG 169
+# PING
+# PONG 170
+# PING
+# PONG 171
+# PING
+# PONG 172
+# PING
+# PONG 173
+# PING
+# PONG 174
+# PING
+# PONG 175
+# PING
+# PONG 176
+# PING
+# PONG 177
+# PING
+# PONG 178
+# PING
+# PONG 179
+# PING
+# PONG 180
+# PING
+# PONG 181
+# PING
+# PONG 182
+# PING
+# PONG 183
+# PING
+# PONG 184
+# PING
+# PONG 185
+# PING
+# PONG 186
+# PING
+# PONG 187
+# PING
+# PONG 188
+# PING
+# PONG 189
+# PING
+# PONG 190
+# PING
+# PONG 191
+# PING
+# PONG 192
+# PING
+# PONG 193
+# PING
+# PONG 194
+# PING
+# PONG 195
+# PING
+# PONG 196
+# PING
+# PONG 197
+# PING
+# PONG 198
+# PING
+# PONG 199
+# PING
+# PONG 200
+# PING
+# PONG 201
+# PING
+# PONG 202
+# PING
+# PONG 203
+# PING
+# PONG 204
+# PING
+# PONG 205
+# PING
+# PONG 206
+# PING
+# PONG 207
+# PING
+# PONG 208
+# PING
+# PONG 209
+# PING
+# PONG 210
+# PING
+# PONG 211
+# PING
+# PONG 212
+# PING
+# PONG 213
+# PING
+# PONG 214
+# PING
+# PONG 215
+# PING
+# PONG 216
+# PING
+# PONG 217
+# PING
+# PONG 218
+# PING
+# PONG 219
+# PING
+# PONG 220
+# PING
+# PONG 221
+# PING
+# PONG 222
+# PING
+# PONG 223
+# PING
+# PONG 224
+# PING
+# PONG 225
+# PING
+# PONG 226
+# PING
+# PONG 227
+# PING
+# PONG 228
+# PING
+# PONG 229
+# PING
+# PONG 230
+# PING
+# PONG 231
+# PING
+# PONG 232
+# PING
+# PONG 233
+# PING
+# PONG 234
+# PING
+# PONG 235
+# PING
+# PONG 236
+# PING
+# PONG 237
+# PING
+# PONG 238
+# PING
+# PONG 239
+# PING
+# PONG 240
+# PING
+# PONG 241
+# PING
+# PONG 242
+# PING
+# PONG 243
+# PING
+# PONG 244
+# PING
+# PONG 245
+# PING
+# PONG 246
+# PING
+# PONG 247
+# PING
+# PONG 248
+# PING
+# PONG 249
+# PING
+# PONG 250
+# PING
+# PONG 251
+# PING
+# PONG 252
+# PING
+# PONG 253
+# PING
+# PONG 254
+# PING
+# PONG 255
+# PING
+# PONG 256
+# PING
+# PONG 257
+# PING
+# PONG 258
+# PING
+# PONG 259
+# PING
+# PONG 260
+# PING
+# PONG 261
+# PING
+# PONG 262
+# PING
+# PONG 263
+# PING
+# PONG 264
+# PING
+# PONG 265
+# PING
+# PONG 266
+# PING
+# PONG 267
+# PING
+# PONG 268
+# PING
+# PONG 269
+# PING
+# PONG 270
+# PING
+# PONG 271
+# PING
+# PONG 272
+# PING
+# PONG 273
+# PING
+# PONG 274
+# PING
+# PONG 275
+# PING
+# PONG 276
+# PING
+# PONG 277
+# PING
+# PONG 278
+# PING
+# PONG 279
+# PING
+# PONG 280
+# PING
+# PONG 281
+# PING
+# PONG 282
+# PING
+# PONG 283
+# PING
+# PONG 284
+# PING
+# PONG 285
+# PING
+# PONG 286
+# PING
+# PONG 287
+# PING
+# PONG 288
+# PING
+# PONG 289
+# PING
+# PONG 290
+# PING
+# PONG 291
+# PING
+# PONG 292
+# PING
+# PONG 293
+# PING
+# PONG 294
+# PING
+# PONG 295
+# PING
+# PONG 296
+# PING
+# PONG 297
+# PING
+# PONG 298
+# PING
+# PONG 299
+# PING
+# PONG 300
+# PING
+# PONG 301
+# PING
+# PONG 302
+# PING
+# PONG 303
+# PING
+# PONG 304
+# PING
+# PONG 305
+# PING
+# PONG 306
+# PING
+# PONG 307
+# PING
+# PONG 308
+# PING
+# PONG 309
+# PING
+# PONG 310
+# PING
+# PONG 311
+# PING
+# PONG 312
+# PING
+# PONG 313
+# PING
+# PONG 314
+# PING
+# PONG 315
+# PING
+# PONG 316
+# PING
+# PONG 317
+# PING
+# PONG 318
+# PING
+# PONG 319
+# PING
+# PONG 320
+# PING
+# PONG 321
+# PING
+# PONG 322
+# PING
+# PONG 323
+# PING
+# PONG 324
+# PING
+# PONG 325
+# PING
+# PONG 326
+# PING
+# PONG 327
+# PING
+# PONG 328
+# PING
+# PONG 329
+# PING
+# PONG 330
+# PING
+# PONG 331
+# PING
+# PONG 332
+# PING
+# PONG 333
+# PING
+# PONG 334
+# PING
+# PONG 335
+# PING
+# PONG 336
+# PING
+# PONG 337
+# PING
+# PONG 338
+# PING
+# PONG 339
+# PING
+# PONG 340
+# PING
+# PONG 341
+# PING
+# PONG 342
+# PING
+# PONG 343
+# PING
+# PONG 344
+# PING
+# PONG 345
+# PING
+# PONG 346
+# PING
+# PONG 347
+# PING
+# PONG 348
+# PING
+# PONG 349
+# PING
+# PONG 350
+# PING
+# PONG 351
+# PING
+# PONG 352
+# PING
+# PONG 353
+# PING
+# PONG 354
+# PING
+# PONG 355
+# PING
+# PONG 356
+# PING
+# PONG 357
+# PING
+# PONG 358
+# PING
+# PONG 359
+# PING
+# PONG 360
+# PING
+# PONG 361
+# PING
+# PONG 362
+# PING
+# PONG 363
+# PING
+# PONG 364
+# PING
+# PONG 365
+# PING
+# PONG 366
+# PING
+# PONG 367
+# PING
+# PONG 368
+# PING
+# PONG 369
+# PING
+# PONG 370
+# PING
+# PONG 371
+# PING
+# PONG 372
+# PING
+# PONG 373
+# PING
+# PONG 374
+# PING
+# PONG 375
+# PING
+# PONG 376
+# PING
+# PONG 377
+# PING
+# PONG 378
+# PING
+# PONG 379
+# PING
+# PONG 380
+# PING
+# PONG 381
+# PING
+# PONG 382
+# PING
+# PONG 383
+# PING
+# PONG 384
+# PING
+# PONG 385
+# PING
+# PONG 386
+# PING
+# PONG 387
+# PING
+# PONG 388
+# PING
+# PONG 389
+# PING
+# PONG 390
+# PING
+# PONG 391
+# PING
+# PONG 392
+# PING
+# PONG 393
+# PING
+# PONG 394
+# PING
+# PONG 395
+# PING
+# PONG 396
+# PING
+# PONG 397
+# PING
+# PONG 398
+# PING
+# PONG 399
+# PING
+# PONG 400
+# PING
+# PONG 401
+# PING
+# PONG 402
+# PING
+# PONG 403
+# PING
+# PONG 404
+# PING
+# PONG 405
+# PING
+# PONG 406
+# PING
+# PONG 407
+# PING
+# PONG 408
+# PING
+# PONG 409
+# PING
+# PONG 410
+# PING
+# PONG 411
+# PING
+# PONG 412
+# PING
+# PONG 413
+# PING
+# PONG 414
+# PING
+# PONG 415
+# PING
+# PONG 416
+# PING
+# PONG 417
+# PING
+# PONG 418
+# PING
+# PONG 419
+# PING
+# PONG 420
+# PING
+# PONG 421
+# PING
+# PONG 422
+# PING
+# PONG 423
+# PING
+# PONG 424
+# PING
+# PONG 425
+# PING
+# PONG 426
+# PING
+# PONG 427
+# PING
+# PONG 428
+# PING
+# PONG 429
+# PING
+# PONG 430
+# PING
+# PONG 431
+# PING
+# PONG 432
+# PING
+# PONG 433
+# PING
+# PONG 434
+# PING
+# PONG 435
+# PING
+# PONG 436
+# PING
+# PONG 437
+# PING
+# PONG 438
+# PING
+# PONG 439
+# PING
+# PONG 440
+# PING
+# PONG 441
+# PING
+# PONG 442
+# PING
+# PONG 443
+# PING
+# PONG 444
+# PING
+# PONG 445
+# PING
+# PONG 446
+# PING
+# PONG 447
+# PING
+# PONG 448
+# PING
+# PONG 449
+# PING
+# PONG 450
+# PING
+# PONG 451
+# PING
+# PONG 452
+# PING
+# PONG 453
+# PING
+# PONG 454
+# PING
+# PONG 455
+# PING
+# PONG 456
+# PING
+# PONG 457
+# PING
+# PONG 458
+# PING
+# PONG 459
+# PING
+# PONG 460
+# PING
+# PONG 461
+# PING
+# PONG 462
+# PING
+# PONG 463
+# PING
+# PONG 464
+# PING
+# PONG 465
+# PING
+# PONG 466
+# PING
+# PONG 467
+# PING
+# PONG 468
+# PING
+# PONG 469
+# PING
+# PONG 470
+# PING
+# PONG 471
+# PING
+# PONG 472
+# PING
+# PONG 473
+# PING
+# PONG 474
+# PING
+# PONG 475
+# PING
+# PONG 476
+# PING
+# PONG 477
+# PING
+# PONG 478
+# PING
+# PONG 479
+# PING
+# PONG 480
+# PING
+# PONG 481
+# PING
+# PONG 482
+# PING
+# PONG 483
+# PING
+# PONG 484
+# PING
+# PONG 485
+# PING
+# PONG 486
+# PING
+# PONG 487
+# PING
+# PONG 488
+# PING
+# PONG 489
+# PING
+# PONG 490
+# PING
+# PONG 491
+# PING
+# PONG 492
+# PING
+# PONG 493
+# PING
+# PONG 494
+# PING
+# PONG 495
+# PING
+# PONG 496
+# PING
+# PONG 497
+# PING
+# PONG 498
+# PING
+# PONG 499
+# PING
+# PONG 500
+# PING
+# PONG 501
+# PING
+# PONG 502
+# PING
+# PONG 503
+# PING
+# PONG 504
+# PING
+# PONG 505
+# PING
+# PONG 506
+# PING
+# PONG 507
+# PING
+# PONG 508
+# PING
+# PONG 509
+# PING
+# PONG 510
+# PING
+# PONG 511
+# PING
+# PONG 512
+# PING
+# PONG 513
+# PING
+# PONG 514
+# PING
+# PONG 515
+# PING
+# PONG 516
+# PING
+# PONG 517
+# PING
+# PONG 518
+# PING
+# PONG 519
+# PING
+# PONG 520
+# PING
+# PONG 521
+# PING
+# PONG 522
+# PING
+# PONG 523
+# PING
+# PONG 524
+# PING
+# PONG 525
+# PING
+# PONG 526
+# PING
+# PONG 527
+# PING
+# PONG 528
+# PING
+# PONG 529
+# PING
+# PONG 530
+# PING
+# PONG 531
+# PING
+# PONG 532
+# PING
+# PONG 533
+# PING
+# PONG 534
+# PING
+# PONG 535
+# PING
+# PONG 536
+# PING
+# PONG 537
+# PING
+# PONG 538
+# PING
+# PONG 539
+# PING
+# PONG 540
+# PING
+# PONG 541
+# PING
+# PONG 542
+# PING
+# PONG 543
+# PING
+# PONG 544
+# PING
+# PONG 545
+# PING
+# PONG 546
+# PING
+# PONG 547
+# PING
+# PONG 548
+# PING
+# PONG 549
+# PING
+# PONG 550
+# PING
+# PONG 551
+# PING
+# PONG 552
+# PING
+# PONG 553
+# PING
+# PONG 554
+# PING
+# PONG 555
+# PING
+# PONG 556
+# PING
+# PONG 557
+# PING
+# PONG 558
+# PING
+# PONG 559
+# PING
+# PONG 560
+# PING
+# PONG 561
+# PING
+# PONG 562
+# PING
+# PONG 563
+# PING
+# PONG 564
+# PING
+# PONG 565
+# PING
+# PONG 566
+# PING
+# PONG 567
+# PING
+# PONG 568
+# PING
+# PONG 569
+# PING
+# PONG 570
+# PING
+# PONG 571
+# PING
+# PONG 572
+# PING
+# PONG 573
+# PING
+# PONG 574
+# PING
+# PONG 575
+# PING
+# PONG 576
+# PING
+# PONG 577
+# PING
+# PONG 578
+# PING
+# PONG 579
+# PING
+# PONG 580
+# PING
+# PONG 581
+# PING
+# PONG 582
+# PING
+# PONG 583
+# PING
+# PONG 584
+# PING
+# PONG 585
+# PING
+# PONG 586
+# PING
+# PONG 587
+# PING
+# PONG 588
+# PING
+# PONG 589
+# PING
+# PONG 590
+# PING
+# PONG 591
+# PING
+# PONG 592
+# PING
+# PONG 593
+# PING
+# PONG 594
+# PING
+# PONG 595
+# PING
+# PONG 596
+# PING
+# PONG 597
+# PING
+# PONG 598
+# PING
+# PONG 599
+# PING
+# PONG 600
+# PING
+# PONG 601
+# PING
+# PONG 602
+# PING
+# PONG 603
+# PING
+# PONG 604
+# PING
+# PONG 605
+# PING
+# PONG 606
+# PING
+# PONG 607
+# PING
+# PONG 608
+# PING
+# PONG 609
+# PING
+# PONG 610
+# PING
+# PONG 611
+# PING
+# PONG 612
+# PING
+# PONG 613
+# PING
+# PONG 614
+# PING
+# PONG 615
+# PING
+# PONG 616
+# PING
+# PONG 617
+# PING
+# PONG 618
+# PING
+# PONG 619
+# PING
+# PONG 620
+# PING
+# PONG 621
+# PING
+# PONG 622
+# PING
+# PONG 623
+# PING
+# PONG 624
+# PING
+# PONG 625
+# PING
+# PONG 626
+# PING
+# PONG 627
+# PING
+# PONG 628
+# PING
+# PONG 629
+# PING
+# PONG 630
+# PING
+# PONG 631
+# PING
+# PONG 632
+# PING
+# PONG 633
+# PING
+# PONG 634
+# PING
+# PONG 635
+# PING
+# PONG 636
+# PING
+# PONG 637
+# PING
+# PONG 638
+# PING
+# PONG 639
+# PING
+# PONG 640
+# PING
+# PONG 641
+# PING
+# PONG 642
+# PING
+# PONG 643
+# PING
+# PONG 644
+# PING
+# PONG 645
+# PING
+# PONG 646
+# PING
+# PONG 647
+# PING
+# PONG 648
+# PING
+# PONG 649
+# PING
+# PONG 650
+# PING
+# PONG 651
+# PING
+# PONG 652
+# PING
+# PONG 653
+# PING
+# PONG 654
+# PING
+# PONG 655
+# PING
+# PONG 656
+# PING
+# PONG 657
+# PING
+# PONG 658
+# PING
+# PONG 659
+# PING
+# PONG 660
+# PING
+# PONG 661
+# PING
+# PONG 662
+# PING
+# PONG 663
+# PING
+# PONG 664
+# PING
+# PONG 665
+# PING
+# PONG 666
+# PING
+# PONG 667
+# PING
+# PONG 668
+# PING
+# PONG 669
+# PING
+# PONG 670
+# PING
+# PONG 671
+# PING
+# PONG 672
+# PING
+# PONG 673
+# PING
+# PONG 674
+# PING
+# PONG 675
+# PING
+# PONG 676
+# PING
+# PONG 677
+# PING
+# PONG 678
+# PING
+# PONG 679
+# PING
+# PONG 680
+# PING
+# PONG 681
+# PING
+# PONG 682
+# PING
+# PONG 683
+# PING
+# PONG 684
+# PING
+# PONG 685
+# PING
+# PONG 686
+# PING
+# PONG 687
+# PING
+# PONG 688
+# PING
+# PONG 689
+# PING
+# PONG 690
+# PING
+# PONG 691
+# PING
+# PONG 692
+# PING
+# PONG 693
+# PING
+# PONG 694
+# PING
+# PONG 695
+# PING
+# PONG 696
+# PING
+# PONG 697
+# PING
+# PONG 698
+# PING
+# PONG 699
+# PING
+# PONG 700
+# PING
+# PONG 701
+# PING
+# PONG 702
+# PING
+# PONG 703
+# PING
+# PONG 704
+# PING
+# PONG 705
+# PING
+# PONG 706
+# PING
+# PONG 707
+# PING
+# PONG 708
+# PING
+# PONG 709
+# PING
+# PONG 710
+# PING
+# PONG 711
+# PING
+# PONG 712
+# PING
+# PONG 713
+# PING
+# PONG 714
+# PING
+# PONG 715
+# PING
+# PONG 716
+# PING
+# PONG 717
+# PING
+# PONG 718
+# PING
+# PONG 719
+# PING
+# PONG 720
+# PING
+# PONG 721
+# PING
+# PONG 722
+# PING
+# PONG 723
+# PING
+# PONG 724
+# PING
+# PONG 725
+# PING
+# PONG 726
+# PING
+# PONG 727
+# PING
+# PONG 728
+# PING
+# PONG 729
+# PING
+# PONG 730
+# PING
+# PONG 731
+# PING
+# PONG 732
+# PING
+# PONG 733
+# PING
+# PONG 734
+# PING
+# PONG 735
+# PING
+# PONG 736
+# PING
+# PONG 737
+# PING
+# PONG 738
+# PING
+# PONG 739
+# PING
+# PONG 740
+# PING
+# PONG 741
+# PING
+# PONG 742
+# PING
+# PONG 743
+# PING
+# PONG 744
+# PING
+# PONG 745
+# PING
+# PONG 746
+# PING
+# PONG 747
+# PING
+# PONG 748
+# PING
+# PONG 749
+# PING
+# PONG 750
+# PING
+# PONG 751
+# PING
+# PONG 752
+# PING
+# PONG 753
+# PING
+# PONG 754
+# PING
+# PONG 755
+# PING
+# PONG 756
+# PING
+# PONG 757
+# PING
+# PONG 758
+# PING
+# PONG 759
+# PING
+# PONG 760
+# PING
+# PONG 761
+# PING
+# PONG 762
+# PING
+# PONG 763
+# PING
+# PONG 764
+# PING
+# PONG 765
+# PING
+# PONG 766
+# PING
+# PONG 767
+# PING
+# PONG 768
+# PING
+# PONG 769
+# PING
+# PONG 770
+# PING
+# PONG 771
+# PING
+# PONG 772
+# PING
+# PONG 773
+# PING
+# PONG 774
+# PING
+# PONG 775
+# PING
+# PONG 776
+# PING
+# PONG 777
+# PING
+# PONG 778
+# PING
+# PONG 779
+# PING
+# PONG 780
+# PING
+# PONG 781
+# PING
+# PONG 782
+# PING
+# PONG 783
+# PING
+# PONG 784
+# PING
+# PONG 785
+# PING
+# PONG 786
+# PING
+# PONG 787
+# PING
+# PONG 788
+# PING
+# PONG 789
+# PING
+# PONG 790
+# PING
+# PONG 791
+# PING
+# PONG 792
+# PING
+# PONG 793
+# PING
+# PONG 794
+# PING
+# PONG 795
+# PING
+# PONG 796
+# PING
+# PONG 797
+# PING
+# PONG 798
+# PING
+# PONG 799
+# PING
+# PONG 800
+# PING
+# PONG 801
+# PING
+# PONG 802
+# PING
+# PONG 803
+# PING
+# PONG 804
+# PING
+# PONG 805
+# PING
+# PONG 806
+# PING
+# PONG 807
+# PING
+# PONG 808
+# PING
+# PONG 809
+# PING
+# PONG 810
+# PING
+# PONG 811
+# PING
+# PONG 812
+# PING
+# PONG 813
+# PING
+# PONG 814
+# PING
+# PONG 815
+# PING
+# PONG 816
+# PING
+# PONG 817
+# PING
+# PONG 818
+# PING
+# PONG 819
+# PING
+# PONG 820
+# PING
+# PONG 821
+# PING
+# PONG 822
+# PING
+# PONG 823
+# PING
+# PONG 824
+# PING
+# PONG 825
+# PING
+# PONG 826
+# PING
+# PONG 827
+# PING
+# PONG 828
+# PING
+# PONG 829
+# PING
+# PONG 830
+# PING
+# PONG 831
+# PING
+# PONG 832
+# PING
+# PONG 833
+# PING
+# PONG 834
+# PING
+# PONG 835
+# PING
+# PONG 836
+# PING
+# PONG 837
+# PING
+# PONG 838
+# PING
+# PONG 839
+# PING
+# PONG 840
+# PING
+# PONG 841
+# PING
+# PONG 842
+# PING
+# PONG 843
+# PING
+# PONG 844
+# PING
+# PONG 845
+# PING
+# PONG 846
+# PING
+# PONG 847
+# PING
+# PONG 848
+# PING
+# PONG 849
+# PING
+# PONG 850
+# PING
+# PONG 851
+# PING
+# PONG 852
+# PING
+# PONG 853
+# PING
+# PONG 854
+# PING
+# PONG 855
+# PING
+# PONG 856
+# PING
+# PONG 857
+# PING
+# PONG 858
+# PING
+# PONG 859
+# PING
+# PONG 860
+# PING
+# PONG 861
+# PING
+# PONG 862
+# PING
+# PONG 863
+# PING
+# PONG 864
+# PING
+# PONG 865
+# PING
+# PONG 866
+# PING
+# PONG 867
+# PING
+# PONG 868
+# PING
+# PONG 869
+# PING
+# PONG 870
+# PING
+# PONG 871
+# PING
+# PONG 872
+# PING
+# PONG 873
+# PING
+# PONG 874
+# PING
+# PONG 875
+# PING
+# PONG 876
+# PING
+# PONG 877
+# PING
+# PONG 878
+# PING
+# PONG 879
+# PING
+# PONG 880
+# PING
+# PONG 881
+# PING
+# PONG 882
+# PING
+# PONG 883
+# PING
+# PONG 884
+# PING
+# PONG 885
+# PING
+# PONG 886
+# PING
+# PONG 887
+# PING
+# PONG 888
+# PING
+# PONG 889
+# PING
+# PONG 890
+# PING
+# PONG 891
+# PING
+# PONG 892
+# PING
+# PONG 893
+# PING
+# PONG 894
+# PING
+# PONG 895
+# PING
+# PONG 896
+# PING
+# PONG 897
+# PING
+# PONG 898
+# PING
+# PONG 899
+# PING
+# PONG 900
+# PING
+# PONG 901
+# PING
+# PONG 902
+# PING
+# PONG 903
+# PING
+# PONG 904
+# PING
+# PONG 905
+# PING
+# PONG 906
+# PING
+# PONG 907
+# PING
+# PONG 908
+# PING
+# PONG 909
+# PING
+# PONG 910
+# PING
+# PONG 911
+# PING
+# PONG 912
+# PING
+# PONG 913
+# PING
+# PONG 914
+# PING
+# PONG 915
+# PING
+# PONG 916
+# PING
+# PONG 917
+# PING
+# PONG 918
+# PING
+# PONG 919
+# PING
+# PONG 920
+# PING
+# PONG 921
+# PING
+# PONG 922
+# PING
+# PONG 923
+# PING
+# PONG 924
+# PING
+# PONG 925
+# PING
+# PONG 926
+# PING
+# PONG 927
+# PING
+# PONG 928
+# PING
+# PONG 929
+# PING
+# PONG 930
+# PING
+# PONG 931
+# PING
+# PONG 932
+# PING
+# PONG 933
+# PING
+# PONG 934
+# PING
+# PONG 935
+# PING
+# PONG 936
+# PING
+# PONG 937
+# PING
+# PONG 938
+# PING
+# PONG 939
+# PING
+# PONG 940
+# PING
+# PONG 941
+# PING
+# PONG 942
+# PING
+# PONG 943
+# PING
+# PONG 944
+# PING
+# PONG 945
+# PING
+# PONG 946
+# PING
+# PONG 947
+# PING
+# PONG 948
+# PING
+# PONG 949
+# PING
+# PONG 950
+# PING
+# PONG 951
+# PING
+# PONG 952
+# PING
+# PONG 953
+# PING
+# PONG 954
+# PING
+# PONG 955
+# PING
+# PONG 956
+# PING
+# PONG 957
+# PING
+# PONG 958
+# PING
+# PONG 959
+# PING
+# PONG 960
+# PING
+# PONG 961
+# PING
+# PONG 962
+# PING
+# PONG 963
+# PING
+# PONG 964
+# PING
+# PONG 965
+# PING
+# PONG 966
+# PING
+# PONG 967
+# PING
+# PONG 968
+# PING
+# PONG 969
+# PING
+# PONG 970
+# PING
+# PONG 971
+# PING
+# PONG 972
+# PING
+# PONG 973
+# PING
+# PONG 974
+# PING
+# PONG 975
+# PING
+# PONG 976
+# PING
+# PONG 977
+# PING
+# PONG 978
+# PING
+# PONG 979
+# PING
+# PONG 980
+# PING
+# PONG 981
+# PING
+# PONG 982
+# PING
+# PONG 983
+# PING
+not ok 254 - tcp_read_stop
+# exit code 5376
+# Output from process `tcp_read_stop`: (no output)
+Output from process `tcp_read_stop`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-read-stop.c on line 31: 0 && "fail_cb called"
+# Abort
+ok 255 - tcp_ref
+ok 256 - tcp_ref2
+ok 257 - tcp_ref2b
+ok 258 - tcp_ref3
+ok 259 - tcp_ref4
+ok 260 - tcp_shutdown_after_write
+ok 261 - tcp_try_write
+not ok 262 - tcp_unexpected_read
+# exit code 5376
+# Output from process `tcp_unexpected_read`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-tcp-unexpected-read.c on line 53: 0 && "alloc_cb should not have been called"
+# Abort
+ok 263 - tcp_write_after_connect
+ok 264 - tcp_write_fail
+ok 265 - tcp_write_queue_order
+ok 266 - tcp_write_ready
+ok 267 - tcp_write_to_half_open_connection
+not ok 268 - tcp_writealot
+# timeout
+# Output from process `tcp_writealot`: (no output)
+Output from process `tcp_writealot`: (no output)
+ok 269 - thread_create
+ok 270 - thread_equal
+ok 271 - thread_local_storage
+ok 272 - thread_mutex
+ok 273 - thread_mutex_recursive
+ok 274 - thread_rwlock
+ok 275 - thread_rwlock_trylock
+ok 276 - thread_stack_size
+ok 277 - threadpool_cancel_fs
+ok 278 - threadpool_cancel_getaddrinfo
+ok 279 - threadpool_cancel_getnameinfo
+ok 280 - threadpool_cancel_single
+ok 281 - threadpool_cancel_work
+ok 282 - threadpool_multiple_event_loops
+ok 283 - threadpool_queue_work_einval
+ok 284 - threadpool_queue_work_simple
+ok 285 - timer
+ok 286 - timer_again
+ok 287 - timer_early_check
+ok 288 - timer_from_check
+ok 289 - timer_huge_repeat
+ok 290 - timer_huge_timeout
+ok 291 - timer_init
+ok 292 - timer_null_callback
+ok 293 - timer_order
+ok 294 - timer_ref
+ok 295 - timer_ref2
+ok 296 - timer_run_once
+ok 297 - timer_start_twice
+ok 298 - tmpdir
+ok 299 - tty
+ok 300 - tty_file
+ok 301 - tty_pty
+ok 302 - udp_alloc_cb_fail
+ok 303 - udp_bind
+ok 304 - udp_bind_reuseaddr
+not ok 305 - udp_create_early
+# exit code 5376
+# Output from process `udp_create_early`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-udp-create-socket-early.c on line 54: r == 0
+# Abort
+ok 306 - udp_create_early_bad_bind # SKIP IPv6 not supported
+ok 307 - udp_create_early_bad_domain
+ok 308 - udp_dgram_too_big
+ok 309 - udp_dual_stack # SKIP IPv6 not supported
+ok 310 - udp_ipv6_only # SKIP IPv6 not supported
+ok 311 - udp_multicast_interface
+ok 312 - udp_multicast_interface6 # SKIP IPv6 not supported
+ok 313 - udp_multicast_join
+ok 314 - udp_multicast_join6 # SKIP IPv6 not supported
+ok 315 - udp_multicast_ttl
+not ok 316 - udp_no_autobind
+# exit code 5376
+# Output from process `udp_no_autobind`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-udp-options.c on line 147: 0 == uv_udp_set_multicast_loop(&h2, 1)
+# Abort
+ok 317 - udp_open
+ok 318 - udp_open_twice
+not ok 319 - udp_options
+# exit code 5376
+# Output from process `udp_options`:
+# Assertion failed in /boot/home/Desktop/p/node-master/deps/uv/test/test-udp-options.c on line 74: r == 0
+# Abort
+ok 320 - udp_options6 # SKIP IPv6 not supported
+ok 321 - udp_ref
+ok 322 - udp_ref2
+ok 323 - udp_ref3
+ok 324 - udp_send_and_recv
+ok 325 - udp_send_hang_loop
+ok 326 - udp_send_immediate
+ok 327 - udp_send_unreachable
+ok 328 - udp_try_send
+ok 329 - unref_in_prepare_cb
+ok 330 - walk_handles
+ok 331 - watcher_cross_stop # SKIP File descriptor limit too low.
+ok 332 - we_get_signal
+ok 333 - we_get_signal_one_shot
+ok 334 - we_get_signals
+ok 335 - we_get_signals_mixed
